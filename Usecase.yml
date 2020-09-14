@@ -1,0 +1,15 @@
+---
+-name : All_Tasks
+ hosts : All
+ tasks:
+   - name : "copy file"
+     copy : src=/home/kammo/abc/c.txt dest=/home/kammo/xyz/c.txt
+   - name : "Restart win services"
+     win_service:
+       name:spooler       
+       state:restarted
+    -name : Pause a service
+       win_services:
+         name : Netlogon
+         state : Paused
+     
